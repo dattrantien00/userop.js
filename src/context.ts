@@ -44,8 +44,6 @@ export class UserOperationMiddlewareCtx implements IUserOperationMiddlewareCtx {
       ["bytes32", "address", "uint256"],
       [ethers.utils.keccak256(packed), this.entryPoint, this.chainId]
     );
-    console.log((ethers.utils.keccak256(packed)))
-    console.log(ethers.utils.keccak256(enc))
     return ethers.utils.keccak256(enc);
   }
 }

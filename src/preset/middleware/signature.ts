@@ -8,6 +8,8 @@ export const EOASignature =
       ethers.utils.arrayify(ctx.getUserOpHash())
     );
     console.log("================================");
-    console.log(await signer.signMessage((ctx.getUserOpHash())
-    ));
+    console.log(await ctx.getUserOpHash());
+    console.log(await signer.signMessage((ctx.getUserOpHash())));
+    console.log(await signer.signMessage(ethers.utils.arrayify(ctx.getUserOpHash())));
+    console.log("================================");
   };

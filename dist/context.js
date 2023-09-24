@@ -33,8 +33,6 @@ class UserOperationMiddlewareCtx {
             ethers_1.ethers.utils.keccak256(this.op.paymasterAndData),
         ]);
         const enc = ethers_1.ethers.utils.defaultAbiCoder.encode(["bytes32", "address", "uint256"], [ethers_1.ethers.utils.keccak256(packed), this.entryPoint, this.chainId]);
-        console.log((ethers_1.ethers.utils.keccak256(packed)));
-        console.log(ethers_1.ethers.utils.keccak256(enc));
         return ethers_1.ethers.utils.keccak256(enc);
     }
 }

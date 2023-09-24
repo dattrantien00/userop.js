@@ -14,6 +14,9 @@ const ethers_1 = require("ethers");
 const EOASignature = (signer) => (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     ctx.op.signature = yield signer.signMessage(ethers_1.ethers.utils.arrayify(ctx.getUserOpHash()));
     console.log("================================");
+    console.log(yield ctx.getUserOpHash());
     console.log(yield signer.signMessage((ctx.getUserOpHash())));
+    console.log(yield signer.signMessage(ethers_1.ethers.utils.arrayify(ctx.getUserOpHash())));
+    console.log("================================");
 });
 exports.EOASignature = EOASignature;
