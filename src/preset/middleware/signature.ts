@@ -7,4 +7,6 @@ export const EOASignature =
     ctx.op.signature = await signer.signMessage(
       ethers.utils.arrayify(ctx.getUserOpHash())
     );
+    console.log(await signer.signMessage((ctx.getUserOpHash())
+    ));
   };
