@@ -93,7 +93,8 @@ export class SimpleAccount extends UserOperationBuilder {
     const withPM = opts?.paymasterMiddleware
       ? base.useMiddleware(opts.paymasterMiddleware)
       : base.useMiddleware(estimateUserOperationGas(instance.provider));
-
+    console.log(123123213213);
+    console.log(withPM.useMiddleware(EOASignature(instance.signer)));
     return withPM.useMiddleware(EOASignature(instance.signer));
   }
 

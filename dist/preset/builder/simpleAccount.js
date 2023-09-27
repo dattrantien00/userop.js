@@ -61,6 +61,8 @@ class SimpleAccount extends builder_1.UserOperationBuilder {
             const withPM = (opts === null || opts === void 0 ? void 0 : opts.paymasterMiddleware)
                 ? base.useMiddleware(opts.paymasterMiddleware)
                 : base.useMiddleware((0, middleware_1.estimateUserOperationGas)(instance.provider));
+            console.log(123123213213);
+            console.log(withPM.useMiddleware((0, middleware_1.EOASignature)(instance.signer)));
             return withPM.useMiddleware((0, middleware_1.EOASignature)(instance.signer));
         });
     }
